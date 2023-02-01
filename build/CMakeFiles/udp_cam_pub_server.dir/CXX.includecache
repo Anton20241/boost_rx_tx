@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anton20241/boost_rx_tx/udp_cam_pub_server.cpp
+iostream
+-
+boost/array.hpp
+-
+boost/asio.hpp
+-
+

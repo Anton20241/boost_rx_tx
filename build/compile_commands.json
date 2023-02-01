@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -isystem /usr/include/opencv4   -std=c++11 -pthread -pthread -g   -o CMakeFiles/udp_client.dir/udp_client.cpp.o -c /home/anton20241/boost_rx_tx/udp_client.cpp",
+  "file": "/home/anton20241/boost_rx_tx/udp_client.cpp"
+},
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -isystem /usr/include/opencv4   -std=c++11 -pthread -pthread -g   -o CMakeFiles/udp_server.dir/udp_server.cpp.o -c /home/anton20241/boost_rx_tx/udp_server.cpp",
+  "file": "/home/anton20241/boost_rx_tx/udp_server.cpp"
+},
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -isystem /usr/include/opencv4   -std=c++11 -pthread -pthread -g   -o CMakeFiles/tcp_cam_server.dir/tcp_cam_server.cpp.o -c /home/anton20241/boost_rx_tx/tcp_cam_server.cpp",
+  "file": "/home/anton20241/boost_rx_tx/tcp_cam_server.cpp"
+},
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -isystem /usr/include/opencv4   -std=c++11 -pthread -pthread -g   -o CMakeFiles/tcp_cam_client.dir/tcp_cam_client.cpp.o -c /home/anton20241/boost_rx_tx/tcp_cam_client.cpp",
+  "file": "/home/anton20241/boost_rx_tx/tcp_cam_client.cpp"
+},
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -isystem /usr/include/opencv4   -std=c++11 -pthread -pthread -g   -o CMakeFiles/tcp_cam_sub_server.dir/tcp_cam_sub_server.cpp.o -c /home/anton20241/boost_rx_tx/tcp_cam_sub_server.cpp",
+  "file": "/home/anton20241/boost_rx_tx/tcp_cam_sub_server.cpp"
+},
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK   -std=c++11 -pthread -pthread -g   -o CMakeFiles/serial_sub.dir/serial_sub.cpp.o -c /home/anton20241/boost_rx_tx/serial_sub.cpp",
+  "file": "/home/anton20241/boost_rx_tx/serial_sub.cpp"
+},
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -isystem /usr/include/opencv4   -std=c++11 -pthread -pthread -g   -o CMakeFiles/tcp_cam_pub_client.dir/tcp_cam_pub_client.cpp.o -c /home/anton20241/boost_rx_tx/tcp_cam_pub_client.cpp",
+  "file": "/home/anton20241/boost_rx_tx/tcp_cam_pub_client.cpp"
+},
+{
+  "directory": "/home/anton20241/boost_rx_tx/build",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK   -std=c++11 -pthread -pthread -g   -o CMakeFiles/serial_pub.dir/serial_pub.cpp.o -c /home/anton20241/boost_rx_tx/serial_pub.cpp",
+  "file": "/home/anton20241/boost_rx_tx/serial_pub.cpp"
+}
+]
