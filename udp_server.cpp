@@ -15,17 +15,18 @@ public:
 	: socket_(io_service, udp::endpoint(udp::v4(), PORT)){}
 
 	void read_msg(){
-		socket_.async_receive_from(boost::asio::buffer(data_, max_length), sender_endpoint_, 
-		[this] (boost::system::error_code ec, std::size_t recvd_bytes){
-			if (!ec && recvd_bytes > 0){
-				std::cout << "recvd_bytes: " << (int)recvd_bytes << std::endl;
-				std::cout << data_ << std::endl;
-				memset(data_, '\0', sizeof(data_));
-				send_msg();
-			} else {
-				read_msg();
-			}
-		});
+
+		boost::system::error_code err;
+		auto recvd = socket_.receive_from(boost::asio::buffer(data_, max_length), sender_endpoint_, 0, err);
+
+		if (!err && recvd > 0){
+			std::cout << "Received Payload --- " << recvd << std::endl;	
+			std::cout << data_ << std::endl;
+			memset(data_, '\0', sizeof(data_));
+			send_msg();
+		} else {
+			std::cerr << err.what();
+		}
 	}
 
 	void send_msg(){
@@ -36,11 +37,9 @@ public:
 		myStr += std::to_string((int)sender_endpoint_.port());
 		myStr += " Message : ";
 		myStr += data_;
-		socket_.async_send_to(boost::asio::buffer(myStr.c_str(), myStr.size()), sender_endpoint_,
-		[this] (boost::system::error_code ec, std::size_t recvd_bytes){
-			std::cout << "SEND_HENDLER_SERVER\n";
-			read_msg();
-		});
+		boost::system::error_code err;
+		auto sent = socket_.send_to(boost::asio::buffer(myStr), sender_endpoint_, 0, err);
+		read_msg();
 	}
 
 
