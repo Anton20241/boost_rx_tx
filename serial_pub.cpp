@@ -1,7 +1,8 @@
 #include <boost/asio.hpp>
 #include <iostream>
+#include <chrono>
 
-#define BOUDRATE 9600
+#define BOUDRATE 115200
 int main() {
     boost::asio::io_service io;
     // Open serial port
@@ -14,11 +15,14 @@ int main() {
     serial.set_option(boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one));
 
     // Read data in a loop and copy to stdout
+    size_t count = 0;
     while(true) {
         char data[] = "Hello!!! Chuvaaaak!!!";
         size_t n = serial.write_some(boost::asio::buffer(data));
         // Write data to stdout
-        printf("Send msg: %s\n", data);
-        sleep(1);
+        std::cout << "count: " << count << std::endl;
+        std::cout << "data: " << data << std::endl;
+        std::this_thread::sleep_for (std::chrono::milliseconds(200));
+        count++;
     }
 }
