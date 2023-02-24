@@ -34,7 +34,7 @@ target_link_libraries( tcp_cam_server ${Boost_LIBRARIES} )
 add_executable( udp_server udp_server.cpp )
 target_link_libraries( udp_server ${Boost_LIBRARIES} )
 
-add_executable( udp_client udp_client.cpp )
+add_executable( udp_client udp_client.cpp umba_crc_table.c umba_crc_table.h)
 target_link_libraries( udp_client ${Boost_LIBRARIES} )
 
 endif()

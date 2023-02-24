@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <boost/asio.hpp>
+#include <boost/bind.hpp>
 #include <stdio.h>
 #include <string.h>
 
@@ -11,57 +12,62 @@ using boost::asio::ip::address;
 
 class UDPServer{
 public:
-	UDPServer(boost::asio::io_service& io_service)
-	: socket_(io_service, udp::endpoint(udp::v4(), PORT)){}
+  UDPServer(boost::asio::io_service& io_service)
+  : socket_(io_service, udp::endpoint(udp::v4(), PORT)){
+    std::cout << "UDP SERVER IS RUNNING\n";
+    boost::bind(&UDPServer::udp_handle_receive, this, boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred);
+    read_msg_udp();
+  }
 
-	void read_msg(){
+  void read_msg_udp(){
+  socket_.async_receive_from(boost::asio::buffer(data_, sizeof(data_)), sender_endpoint_,
+      boost::bind(&UDPServer::udp_handle_receive, this, boost::asio::placeholders::error, 
+      boost::asio::placeholders::bytes_transferred));
+  }
 
-		boost::system::error_code err;
-		auto recvd = socket_.receive_from(boost::asio::buffer(data_, max_length), sender_endpoint_, 0, err);
 
-		if (!err && recvd > 0){
-			std::cout << "Received Payload --- " << recvd << std::endl;	
-			std::cout << data_ << std::endl;
-			memset(data_, '\0', sizeof(data_));
-			send_msg();
-		} else {
-			std::cerr << err.what();
-		}
-	}
+  void do_smth(){
 
-	void send_msg(){
-		// do add sender information and sand back
-		std::string myStr = "Sender endpoint: ";
-		myStr += sender_endpoint_.address().to_string();
-		myStr += " port ";
-		myStr += std::to_string((int)sender_endpoint_.port());
-		myStr += " Message : ";
-		myStr += data_;
-		boost::system::error_code err;
-		auto sent = socket_.send_to(boost::asio::buffer(myStr), sender_endpoint_, 0, err);
-		read_msg();
-	}
-
+  }
 
 private:
-	udp::socket socket_;
-	udp::endpoint sender_endpoint_;
-	enum {max_length = 1024};
-	char data_[max_length] = {'\0'};
+  udp::socket socket_;
+  udp::endpoint sender_endpoint_;
+  enum {max_length = 60};
+  uint8_t data_[max_length] = {0};
+  uint32_t recvd_count = 0;
+
+  void udp_handle_receive(const boost::system::error_code& error, size_t bytes_transferred) {
+    if (error) {
+      std::cout << "Receive failed: " << error.message() << "\n";
+      return;
+    } else {
+      std::cout << "bytes_transferred = " << bytes_transferred << std::endl;
+      for (int i = 0; i < bytes_transferred; i++){
+        printf("[%u]", data_[i]);
+      }
+      read_msg_udp();
+    }
+  }
+
+
+
 };
 
 int main(int argc, char* argv[]){
-	try{
-		// 1) instantiate io_searvice
-		// 2) make a customerized server
-		// 3) start io_service
-		
-		boost::asio::io_service io_service;
-		UDPServer udpServer(io_service);
-		udpServer.read_msg();
-		io_service.run();
-	} catch (std::exception e){
-		std::cerr << "Exeption: " << e.what() << std::endl;
-	}
-	return 0;
+  try{
+    // 1) instantiate io_searvice
+    // 2) make a customerized server
+    // 3) start io_service
+    
+    boost::asio::io_service io_service;
+    UDPServer udpServer(io_service);
+    while(1){
+      udpServer.do_smth();
+      io_service.poll_one();
+    }
+  } catch (std::exception e){
+    std::cerr << "Exeption: " << e.what() << std::endl;
+  }
+  return 0;
 }
