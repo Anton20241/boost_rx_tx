@@ -60,15 +60,15 @@ include CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/udp_server.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/udp_server.cpp.o: ../udp_server.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton20241/boost_rx_tx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/udp_server.dir/udp_server.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udp_server.cpp.o -c /home/anton20241/boost_rx_tx/udp_server.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udp_server.cpp.o -c /home/anton20241/boost_rx_tx/udp_server.cpp
 
 CMakeFiles/udp_server.dir/udp_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/udp_server.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton20241/boost_rx_tx/udp_server.cpp > CMakeFiles/udp_server.dir/udp_server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton20241/boost_rx_tx/udp_server.cpp > CMakeFiles/udp_server.dir/udp_server.cpp.i
 
 CMakeFiles/udp_server.dir/udp_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/udp_server.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton20241/boost_rx_tx/udp_server.cpp -o CMakeFiles/udp_server.dir/udp_server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton20241/boost_rx_tx/udp_server.cpp -o CMakeFiles/udp_server.dir/udp_server.cpp.s
 
 # Object files for target udp_server
 udp_server_OBJECTS = \

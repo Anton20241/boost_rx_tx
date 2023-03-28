@@ -13,8 +13,18 @@ iostream
 -
 boost/asio.hpp
 -
+boost/thread.hpp
+-
+boost/chrono.hpp
+-
 stdio.h
 -
 string.h
+-
+umba_crc_table.h
+/home/anton20241/boost_rx_tx/umba_crc_table.h
+
+/home/anton20241/boost_rx_tx/umba_crc_table.h
+stdint.h
 -
 

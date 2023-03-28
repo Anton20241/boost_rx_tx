@@ -137,19 +137,6 @@ udp_server/fast:
 .PHONY : udp_server/fast
 
 #=============================================================================
-# Target rules for targets named tcp_cam_server
-
-# Build rule for target.
-tcp_cam_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tcp_cam_server
-.PHONY : tcp_cam_server
-
-# fast build rule for target.
-tcp_cam_server/fast:
-	$(MAKE) -f CMakeFiles/tcp_cam_server.dir/build.make CMakeFiles/tcp_cam_server.dir/build
-.PHONY : tcp_cam_server/fast
-
-#=============================================================================
 # Target rules for targets named tcp_cam_client
 
 # Build rule for target.
@@ -174,6 +161,45 @@ tcp_cam_sub_server: cmake_check_build_system
 tcp_cam_sub_server/fast:
 	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/build
 .PHONY : tcp_cam_sub_server/fast
+
+#=============================================================================
+# Target rules for targets named tcp_cam_server
+
+# Build rule for target.
+tcp_cam_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcp_cam_server
+.PHONY : tcp_cam_server
+
+# fast build rule for target.
+tcp_cam_server/fast:
+	$(MAKE) -f CMakeFiles/tcp_cam_server.dir/build.make CMakeFiles/tcp_cam_server.dir/build
+.PHONY : tcp_cam_server/fast
+
+#=============================================================================
+# Target rules for targets named serial_pub_simple
+
+# Build rule for target.
+serial_pub_simple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serial_pub_simple
+.PHONY : serial_pub_simple
+
+# fast build rule for target.
+serial_pub_simple/fast:
+	$(MAKE) -f CMakeFiles/serial_pub_simple.dir/build.make CMakeFiles/serial_pub_simple.dir/build
+.PHONY : serial_pub_simple/fast
+
+#=============================================================================
+# Target rules for targets named serial_sub_simple
+
+# Build rule for target.
+serial_sub_simple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serial_sub_simple
+.PHONY : serial_sub_simple
+
+# fast build rule for target.
+serial_sub_simple/fast:
+	$(MAKE) -f CMakeFiles/serial_sub_simple.dir/build.make CMakeFiles/serial_sub_simple.dir/build
+.PHONY : serial_sub_simple/fast
 
 #=============================================================================
 # Target rules for targets named serial_sub
@@ -241,6 +267,33 @@ serial_pub.cpp.s:
 	$(MAKE) -f CMakeFiles/serial_pub.dir/build.make CMakeFiles/serial_pub.dir/serial_pub.cpp.s
 .PHONY : serial_pub.cpp.s
 
+serial_pub_simple.o: serial_pub_simple.cpp.o
+
+.PHONY : serial_pub_simple.o
+
+# target to build an object file
+serial_pub_simple.cpp.o:
+	$(MAKE) -f CMakeFiles/serial_pub_simple.dir/build.make CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.o
+.PHONY : serial_pub_simple.cpp.o
+
+serial_pub_simple.i: serial_pub_simple.cpp.i
+
+.PHONY : serial_pub_simple.i
+
+# target to preprocess a source file
+serial_pub_simple.cpp.i:
+	$(MAKE) -f CMakeFiles/serial_pub_simple.dir/build.make CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.i
+.PHONY : serial_pub_simple.cpp.i
+
+serial_pub_simple.s: serial_pub_simple.cpp.s
+
+.PHONY : serial_pub_simple.s
+
+# target to generate assembly for a file
+serial_pub_simple.cpp.s:
+	$(MAKE) -f CMakeFiles/serial_pub_simple.dir/build.make CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.s
+.PHONY : serial_pub_simple.cpp.s
+
 serial_sub.o: serial_sub.cpp.o
 
 .PHONY : serial_sub.o
@@ -267,6 +320,33 @@ serial_sub.s: serial_sub.cpp.s
 serial_sub.cpp.s:
 	$(MAKE) -f CMakeFiles/serial_sub.dir/build.make CMakeFiles/serial_sub.dir/serial_sub.cpp.s
 .PHONY : serial_sub.cpp.s
+
+serial_sub_simple.o: serial_sub_simple.cpp.o
+
+.PHONY : serial_sub_simple.o
+
+# target to build an object file
+serial_sub_simple.cpp.o:
+	$(MAKE) -f CMakeFiles/serial_sub_simple.dir/build.make CMakeFiles/serial_sub_simple.dir/serial_sub_simple.cpp.o
+.PHONY : serial_sub_simple.cpp.o
+
+serial_sub_simple.i: serial_sub_simple.cpp.i
+
+.PHONY : serial_sub_simple.i
+
+# target to preprocess a source file
+serial_sub_simple.cpp.i:
+	$(MAKE) -f CMakeFiles/serial_sub_simple.dir/build.make CMakeFiles/serial_sub_simple.dir/serial_sub_simple.cpp.i
+.PHONY : serial_sub_simple.cpp.i
+
+serial_sub_simple.s: serial_sub_simple.cpp.s
+
+.PHONY : serial_sub_simple.s
+
+# target to generate assembly for a file
+serial_sub_simple.cpp.s:
+	$(MAKE) -f CMakeFiles/serial_sub_simple.dir/build.make CMakeFiles/serial_sub_simple.dir/serial_sub_simple.cpp.s
+.PHONY : serial_sub_simple.cpp.s
 
 tcp_cam_client.o: tcp_cam_client.cpp.o
 
@@ -430,6 +510,33 @@ udp_server.cpp.s:
 	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udp_server.cpp.s
 .PHONY : udp_server.cpp.s
 
+umba_crc_table.o: umba_crc_table.c.o
+
+.PHONY : umba_crc_table.o
+
+# target to build an object file
+umba_crc_table.c.o:
+	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/umba_crc_table.c.o
+.PHONY : umba_crc_table.c.o
+
+umba_crc_table.i: umba_crc_table.c.i
+
+.PHONY : umba_crc_table.i
+
+# target to preprocess a source file
+umba_crc_table.c.i:
+	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/umba_crc_table.c.i
+.PHONY : umba_crc_table.c.i
+
+umba_crc_table.s: umba_crc_table.c.s
+
+.PHONY : umba_crc_table.s
+
+# target to generate assembly for a file
+umba_crc_table.c.s:
+	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/umba_crc_table.c.s
+.PHONY : umba_crc_table.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -440,18 +547,26 @@ help:
 	@echo "... edit_cache"
 	@echo "... udp_client"
 	@echo "... udp_server"
-	@echo "... tcp_cam_server"
 	@echo "... tcp_cam_client"
 	@echo "... tcp_cam_sub_server"
+	@echo "... tcp_cam_server"
+	@echo "... serial_pub_simple"
+	@echo "... serial_sub_simple"
 	@echo "... serial_sub"
 	@echo "... tcp_cam_pub_client"
 	@echo "... serial_pub"
 	@echo "... serial_pub.o"
 	@echo "... serial_pub.i"
 	@echo "... serial_pub.s"
+	@echo "... serial_pub_simple.o"
+	@echo "... serial_pub_simple.i"
+	@echo "... serial_pub_simple.s"
 	@echo "... serial_sub.o"
 	@echo "... serial_sub.i"
 	@echo "... serial_sub.s"
+	@echo "... serial_sub_simple.o"
+	@echo "... serial_sub_simple.i"
+	@echo "... serial_sub_simple.s"
 	@echo "... tcp_cam_client.o"
 	@echo "... tcp_cam_client.i"
 	@echo "... tcp_cam_client.s"
@@ -470,6 +585,9 @@ help:
 	@echo "... udp_server.o"
 	@echo "... udp_server.i"
 	@echo "... udp_server.s"
+	@echo "... umba_crc_table.o"
+	@echo "... umba_crc_table.i"
+	@echo "... umba_crc_table.s"
 .PHONY : help
 
 

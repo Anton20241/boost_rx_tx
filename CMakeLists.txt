@@ -19,6 +19,12 @@ target_link_libraries( serial_pub ${Boost_LIBRARIES} )
 add_executable( serial_sub serial_sub.cpp )
 target_link_libraries( serial_sub ${Boost_LIBRARIES} )
 
+add_executable( serial_pub_simple serial_pub_simple.cpp )
+target_link_libraries( serial_pub_simple ${Boost_LIBRARIES} )
+
+add_executable( serial_sub_simple serial_sub_simple.cpp )
+target_link_libraries( serial_sub_simple ${Boost_LIBRARIES} )
+
 add_executable( tcp_cam_pub_client tcp_cam_pub_client.cpp )
 target_link_libraries( tcp_cam_pub_client ${Boost_LIBRARIES} )
 

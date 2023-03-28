@@ -24,42 +24,110 @@ public:
 
     void sendMsg() {
         auto start = std::chrono::high_resolution_clock::now();
-        uint8_t msg[] = {0xAA, 0xBB, 41,          //header
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data 
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x1, 0x1,           //data_!fingers
-                               0x1, 0x1, 0x1, 0x1 //keepalive
+
+        uint8_t msg[] =       {0xAA, 0xBB, 41,          //header
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers 
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1,                     //hand_mount
+                               0x1,                     //hold_position
+                               0x1,                     //camera_from_bat_cam
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1                      //keepalive
                                };
+
         uint8_t crc8 = umba_crc8_table(msg, sizeof(msg));
+
         uint8_t msgToSend[] = {0xAA, 0xBB, 41,          //header
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data 
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x2, 0x3, 0x4, 0x5, //data
-                               0x1, 0x1, 0x1,           //data_!fingers
-                               0x1, 0x1, 0x1, 0x1, crc8 //keepalive
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers 
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1,                     //hand_mount
+                               0x1,                     //hold_position
+                               0x1,                     //camera_from_bat_cam
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               crc8                     //crc8
                                };
+
+        uint8_t msg2[] =      {0xAA, 0xBB, 41,          //header
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers 
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x2,                     //hand_mount
+                               0x2,                     //hold_position
+                               0x2,                     //camera_from_bat_cam
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1                      //keepalive
+                               };
+
+        uint8_t crc8_2 = umba_crc8_table(msg2, sizeof(msg2));
+
+        uint8_t msgToSend2[] = {0xAA, 0xBB, 41,         //header
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers 
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x1, 0x2, 0x3, 0x4, 0x5, //data to fingers
+                               0x2,                     //hand_mount
+                               0x2,                     //hold_position
+                               0x2,                     //camera_from_bat_cam
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               0x1,                     //keepalive
+                               crc8_2                   //crc8_2
+                               };
+
+
         static uint32_t send_count = 0;
         boost::system::error_code err;
-        auto sent = socket_.send_to(boost::asio::buffer(msgToSend), sender_endpoint_, 0, err);
-        if (!err && sent > 0){
-            std::cout << "SEND TO UDP: ";
-            for (int i = 0; i < sizeof(msgToSend); i++){
-                printf("[%u]", msgToSend[i]);
+        if (send_count & 1){
+            auto sent = socket_.send_to(boost::asio::buffer(msgToSend), sender_endpoint_, 0, err);
+            if (!err && sent > 0){
+                std::cout << "SEND TO UDP: ";
+                for (int i = 0; i < sizeof(msgToSend); i++){
+                    printf("[%u]", msgToSend[i]);
+                }
+                std::cout << std::endl;
+                send_count++;
+                std::cout << "Sent Payload = " << sent << "\n";
+                std::cout << "send_count = " << send_count << "\n";
+                //printf("[crc8 = %u\n]", crc8);
+                std::this_thread::sleep_for(std::chrono::microseconds(9000));
             }
-            std::cout << std::endl;
-            send_count++;
-            std::cout << "Sent Payload = " << sent << "\n";
-            std::cout << "send_count = " << send_count << "\n";
-            printf("[crc8 = %u\n]", crc8);
-            std::this_thread::sleep_for(std::chrono::microseconds(10000));
+        } else {
+            auto sent = socket_.send_to(boost::asio::buffer(msgToSend2), sender_endpoint_, 0, err);
+            if (!err && sent > 0){
+                std::cout << "SEND TO UDP: ";
+                for (int i = 0; i < sizeof(msgToSend2); i++){
+                    printf("[%u]", msgToSend2[i]);
+                }
+                std::cout << std::endl;
+                send_count++;
+                std::cout << "Sent Payload = " << sent << "\n";
+                std::cout << "send_count = " << send_count << "\n";
+                //printf("[crc8 = %u\n]", crc8);
+                std::this_thread::sleep_for(std::chrono::microseconds(9000));
+            }
         }
+
         auto end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<float> duration = end - start;
         float mls = duration.count() * 1000;
@@ -78,7 +146,7 @@ private:
 
 int main(int argc, char* argv[])
 {
-    // uint8_t msg1[] = {17, 9, 3, 1, 2, 3, 4, 5};
+    // uint8_t msg1[] = {0, 5, 112, 0};
     // uint8_t crc8_ = umba_crc8_table(msg1, sizeof(msg1));
     // std::cout << "crc8_ = ";
     // printf("%u\n", crc8_);
