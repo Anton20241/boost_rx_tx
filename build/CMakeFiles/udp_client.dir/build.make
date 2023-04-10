@@ -60,28 +60,28 @@ include CMakeFiles/udp_client.dir/flags.make
 CMakeFiles/udp_client.dir/udp_client.cpp.o: CMakeFiles/udp_client.dir/flags.make
 CMakeFiles/udp_client.dir/udp_client.cpp.o: ../udp_client.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton20241/boost_rx_tx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/udp_client.dir/udp_client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/udp_client.dir/udp_client.cpp.o -c /home/anton20241/boost_rx_tx/udp_client.cpp
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/udp_client.dir/udp_client.cpp.o -c /home/anton20241/boost_rx_tx/udp_client.cpp
 
 CMakeFiles/udp_client.dir/udp_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_client.dir/udp_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton20241/boost_rx_tx/udp_client.cpp > CMakeFiles/udp_client.dir/udp_client.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton20241/boost_rx_tx/udp_client.cpp > CMakeFiles/udp_client.dir/udp_client.cpp.i
 
 CMakeFiles/udp_client.dir/udp_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_client.dir/udp_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton20241/boost_rx_tx/udp_client.cpp -o CMakeFiles/udp_client.dir/udp_client.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton20241/boost_rx_tx/udp_client.cpp -o CMakeFiles/udp_client.dir/udp_client.cpp.s
 
 CMakeFiles/udp_client.dir/umba_crc_table.c.o: CMakeFiles/udp_client.dir/flags.make
 CMakeFiles/udp_client.dir/umba_crc_table.c.o: ../umba_crc_table.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton20241/boost_rx_tx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/udp_client.dir/umba_crc_table.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/udp_client.dir/umba_crc_table.c.o   -c /home/anton20241/boost_rx_tx/umba_crc_table.c
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/udp_client.dir/umba_crc_table.c.o   -c /home/anton20241/boost_rx_tx/umba_crc_table.c
 
 CMakeFiles/udp_client.dir/umba_crc_table.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_client.dir/umba_crc_table.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton20241/boost_rx_tx/umba_crc_table.c > CMakeFiles/udp_client.dir/umba_crc_table.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton20241/boost_rx_tx/umba_crc_table.c > CMakeFiles/udp_client.dir/umba_crc_table.c.i
 
 CMakeFiles/udp_client.dir/umba_crc_table.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_client.dir/umba_crc_table.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton20241/boost_rx_tx/umba_crc_table.c -o CMakeFiles/udp_client.dir/umba_crc_table.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton20241/boost_rx_tx/umba_crc_table.c -o CMakeFiles/udp_client.dir/umba_crc_table.c.s
 
 # Object files for target udp_client
 udp_client_OBJECTS = \

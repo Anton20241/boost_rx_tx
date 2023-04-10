@@ -1,0 +1,140 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "boost_rx_tx",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_pub::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_pub-Debug-ce2fbb32eed583a780b3.json",
+					"name" : "serial_pub",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_pub_simple::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_pub_simple-Debug-a04994daffa03da434e2.json",
+					"name" : "serial_pub_simple",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_sub::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_sub-Debug-85e2333d93e3d57e0bba.json",
+					"name" : "serial_sub",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_sub_simple::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_sub_simple-Debug-8fe6aa95426a5d890e52.json",
+					"name" : "serial_sub_simple",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_cam_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_cam_client-Debug-4aa83cc7fecfb1c5fe1a.json",
+					"name" : "tcp_cam_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_cam_pub_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_cam_pub_client-Debug-32fbc002976a7fc31f2d.json",
+					"name" : "tcp_cam_pub_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_cam_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_cam_server-Debug-1b3396644da52c6a34a4.json",
+					"name" : "tcp_cam_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_cam_sub_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_cam_sub_server-Debug-156ca074c0db240e6d91.json",
+					"name" : "tcp_cam_sub_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "udp_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-udp_client-Debug-170f73cc0a6ab227b9cb.json",
+					"name" : "udp_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "udp_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-udp_server-Debug-cb8bfb2b7c8ca8b3e976.json",
+					"name" : "udp_server",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/anton20241/boost_rx_tx/build",
+		"source" : "/home/anton20241/boost_rx_tx"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
