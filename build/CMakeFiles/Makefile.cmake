@@ -61,14 +61,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/udp_client.dir/DependInfo.cmake"
-  "CMakeFiles/udp_server.dir/DependInfo.cmake"
-  "CMakeFiles/tcp_cam_client.dir/DependInfo.cmake"
-  "CMakeFiles/tcp_cam_sub_server.dir/DependInfo.cmake"
-  "CMakeFiles/tcp_cam_server.dir/DependInfo.cmake"
   "CMakeFiles/serial_pub_simple.dir/DependInfo.cmake"
-  "CMakeFiles/serial_sub_simple.dir/DependInfo.cmake"
-  "CMakeFiles/serial_sub.dir/DependInfo.cmake"
-  "CMakeFiles/tcp_cam_pub_client.dir/DependInfo.cmake"
-  "CMakeFiles/serial_pub.dir/DependInfo.cmake"
   )

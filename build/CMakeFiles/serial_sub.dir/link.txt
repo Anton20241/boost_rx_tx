@@ -1,1 +1,0 @@
-/usr/bin/g++   -std=c++11 -pthread -pthread -g  -rdynamic CMakeFiles/serial_sub.dir/serial_sub.cpp.o  -o serial_sub  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0 
