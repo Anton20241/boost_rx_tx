@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/anton20241/boost_rx_tx/build",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK   -std=c++11 -pthread -pthread -g   -o CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.o -c /home/anton20241/boost_rx_tx/serial_pub_simple.cpp",
-  "file": "/home/anton20241/boost_rx_tx/serial_pub_simple.cpp"
-}
-]

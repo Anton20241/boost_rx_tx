@@ -6,23 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/anton20241/boost_rx_tx/serial_pub_simple.cpp
-unistd.h
--
-iostream
--
-string
--
+/home/raspberrypi/boost_rx_tx/serial_pub_simple.cpp
 boost/asio.hpp
 -
-boost/bind.hpp
--
-boost/thread.hpp
--
-chrono
--
-thread
--
-mutex
+iostream
 -
 

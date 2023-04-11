@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton20241/boost_rx_tx/serial_pub_simple.cpp" "/home/anton20241/boost_rx_tx/build/CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.o"
+  "/home/raspberrypi/boost_rx_tx/serial_pub_simple.cpp" "/home/raspberrypi/boost_rx_tx/build/CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
