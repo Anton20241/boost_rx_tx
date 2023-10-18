@@ -44,15 +44,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/raspberrypi/boost_rx_tx
+CMAKE_SOURCE_DIR = /home/anton20241/boost_rx_tx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/raspberrypi/boost_rx_tx/build
+CMAKE_BINARY_DIR = /home/anton20241/boost_rx_tx/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/tcp_cam_sub_server.dir/all
+all: CMakeFiles/tcp_cam_pub_client.dir/all
 all: CMakeFiles/serial_pub_simple.dir/all
 
 .PHONY : all
@@ -63,9 +65,65 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/tcp_cam_sub_server.dir/clean
+clean: CMakeFiles/tcp_cam_pub_client.dir/clean
 clean: CMakeFiles/serial_pub_simple.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tcp_cam_sub_server.dir
+
+# All Build rule for target.
+CMakeFiles/tcp_cam_sub_server.dir/all:
+	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/depend
+	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/boost_rx_tx/build/CMakeFiles --progress-num=5,6 "Built target tcp_cam_sub_server"
+.PHONY : CMakeFiles/tcp_cam_sub_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tcp_cam_sub_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tcp_cam_sub_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles 0
+.PHONY : CMakeFiles/tcp_cam_sub_server.dir/rule
+
+# Convenience name for target.
+tcp_cam_sub_server: CMakeFiles/tcp_cam_sub_server.dir/rule
+
+.PHONY : tcp_cam_sub_server
+
+# clean rule for target.
+CMakeFiles/tcp_cam_sub_server.dir/clean:
+	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/clean
+.PHONY : CMakeFiles/tcp_cam_sub_server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tcp_cam_pub_client.dir
+
+# All Build rule for target.
+CMakeFiles/tcp_cam_pub_client.dir/all:
+	$(MAKE) -f CMakeFiles/tcp_cam_pub_client.dir/build.make CMakeFiles/tcp_cam_pub_client.dir/depend
+	$(MAKE) -f CMakeFiles/tcp_cam_pub_client.dir/build.make CMakeFiles/tcp_cam_pub_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/boost_rx_tx/build/CMakeFiles --progress-num=3,4 "Built target tcp_cam_pub_client"
+.PHONY : CMakeFiles/tcp_cam_pub_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tcp_cam_pub_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tcp_cam_pub_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles 0
+.PHONY : CMakeFiles/tcp_cam_pub_client.dir/rule
+
+# Convenience name for target.
+tcp_cam_pub_client: CMakeFiles/tcp_cam_pub_client.dir/rule
+
+.PHONY : tcp_cam_pub_client
+
+# clean rule for target.
+CMakeFiles/tcp_cam_pub_client.dir/clean:
+	$(MAKE) -f CMakeFiles/tcp_cam_pub_client.dir/build.make CMakeFiles/tcp_cam_pub_client.dir/clean
+.PHONY : CMakeFiles/tcp_cam_pub_client.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/serial_pub_simple.dir
@@ -74,14 +132,14 @@ clean: CMakeFiles/serial_pub_simple.dir/clean
 CMakeFiles/serial_pub_simple.dir/all:
 	$(MAKE) -f CMakeFiles/serial_pub_simple.dir/build.make CMakeFiles/serial_pub_simple.dir/depend
 	$(MAKE) -f CMakeFiles/serial_pub_simple.dir/build.make CMakeFiles/serial_pub_simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/raspberrypi/boost_rx_tx/build/CMakeFiles --progress-num=1,2 "Built target serial_pub_simple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/boost_rx_tx/build/CMakeFiles --progress-num=1,2 "Built target serial_pub_simple"
 .PHONY : CMakeFiles/serial_pub_simple.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/serial_pub_simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/raspberrypi/boost_rx_tx/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/serial_pub_simple.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/raspberrypi/boost_rx_tx/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles 0
 .PHONY : CMakeFiles/serial_pub_simple.dir/rule
 
 # Convenience name for target.

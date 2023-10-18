@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton20241/boost_rx_tx/serial_pub_simple.cpp" "/home/anton20241/boost_rx_tx/build/CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.o"
+  "/home/anton20241/boost_rx_tx/tcp_cam_sub_server.cpp" "/home/anton20241/boost_rx_tx/build/CMakeFiles/tcp_cam_sub_server.dir/tcp_cam_sub_server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,6 +16,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/opencv4"
   )
 
 # Targets to which this target links.

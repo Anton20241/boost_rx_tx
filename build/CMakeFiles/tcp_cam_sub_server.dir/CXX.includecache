@@ -6,9 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/anton20241/boost_rx_tx/serial_pub_simple.cpp
-boost/asio.hpp
--
-iostream
--
-

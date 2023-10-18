@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/raspberrypi/boost_rx_tx
+CMAKE_SOURCE_DIR = /home/anton20241/boost_rx_tx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/raspberrypi/boost_rx_tx/build
+CMAKE_BINARY_DIR = /home/anton20241/boost_rx_tx/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/raspberrypi/boost_rx_tx/build/CMakeFiles /home/raspberrypi/boost_rx_tx/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles /home/anton20241/boost_rx_tx/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/raspberrypi/boost_rx_tx/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/boost_rx_tx/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named tcp_cam_sub_server
+
+# Build rule for target.
+tcp_cam_sub_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcp_cam_sub_server
+.PHONY : tcp_cam_sub_server
+
+# fast build rule for target.
+tcp_cam_sub_server/fast:
+	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/build
+.PHONY : tcp_cam_sub_server/fast
+
+#=============================================================================
+# Target rules for targets named tcp_cam_pub_client
+
+# Build rule for target.
+tcp_cam_pub_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcp_cam_pub_client
+.PHONY : tcp_cam_pub_client
+
+# fast build rule for target.
+tcp_cam_pub_client/fast:
+	$(MAKE) -f CMakeFiles/tcp_cam_pub_client.dir/build.make CMakeFiles/tcp_cam_pub_client.dir/build
+.PHONY : tcp_cam_pub_client/fast
 
 #=============================================================================
 # Target rules for targets named serial_pub_simple
@@ -150,6 +176,60 @@ serial_pub_simple.cpp.s:
 	$(MAKE) -f CMakeFiles/serial_pub_simple.dir/build.make CMakeFiles/serial_pub_simple.dir/serial_pub_simple.cpp.s
 .PHONY : serial_pub_simple.cpp.s
 
+tcp_cam_pub_client.o: tcp_cam_pub_client.cpp.o
+
+.PHONY : tcp_cam_pub_client.o
+
+# target to build an object file
+tcp_cam_pub_client.cpp.o:
+	$(MAKE) -f CMakeFiles/tcp_cam_pub_client.dir/build.make CMakeFiles/tcp_cam_pub_client.dir/tcp_cam_pub_client.cpp.o
+.PHONY : tcp_cam_pub_client.cpp.o
+
+tcp_cam_pub_client.i: tcp_cam_pub_client.cpp.i
+
+.PHONY : tcp_cam_pub_client.i
+
+# target to preprocess a source file
+tcp_cam_pub_client.cpp.i:
+	$(MAKE) -f CMakeFiles/tcp_cam_pub_client.dir/build.make CMakeFiles/tcp_cam_pub_client.dir/tcp_cam_pub_client.cpp.i
+.PHONY : tcp_cam_pub_client.cpp.i
+
+tcp_cam_pub_client.s: tcp_cam_pub_client.cpp.s
+
+.PHONY : tcp_cam_pub_client.s
+
+# target to generate assembly for a file
+tcp_cam_pub_client.cpp.s:
+	$(MAKE) -f CMakeFiles/tcp_cam_pub_client.dir/build.make CMakeFiles/tcp_cam_pub_client.dir/tcp_cam_pub_client.cpp.s
+.PHONY : tcp_cam_pub_client.cpp.s
+
+tcp_cam_sub_server.o: tcp_cam_sub_server.cpp.o
+
+.PHONY : tcp_cam_sub_server.o
+
+# target to build an object file
+tcp_cam_sub_server.cpp.o:
+	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/tcp_cam_sub_server.cpp.o
+.PHONY : tcp_cam_sub_server.cpp.o
+
+tcp_cam_sub_server.i: tcp_cam_sub_server.cpp.i
+
+.PHONY : tcp_cam_sub_server.i
+
+# target to preprocess a source file
+tcp_cam_sub_server.cpp.i:
+	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/tcp_cam_sub_server.cpp.i
+.PHONY : tcp_cam_sub_server.cpp.i
+
+tcp_cam_sub_server.s: tcp_cam_sub_server.cpp.s
+
+.PHONY : tcp_cam_sub_server.s
+
+# target to generate assembly for a file
+tcp_cam_sub_server.cpp.s:
+	$(MAKE) -f CMakeFiles/tcp_cam_sub_server.dir/build.make CMakeFiles/tcp_cam_sub_server.dir/tcp_cam_sub_server.cpp.s
+.PHONY : tcp_cam_sub_server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +238,18 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... tcp_cam_sub_server"
+	@echo "... tcp_cam_pub_client"
 	@echo "... serial_pub_simple"
 	@echo "... serial_pub_simple.o"
 	@echo "... serial_pub_simple.i"
 	@echo "... serial_pub_simple.s"
+	@echo "... tcp_cam_pub_client.o"
+	@echo "... tcp_cam_pub_client.i"
+	@echo "... tcp_cam_pub_client.s"
+	@echo "... tcp_cam_sub_server.o"
+	@echo "... tcp_cam_sub_server.i"
+	@echo "... tcp_cam_sub_server.s"
 .PHONY : help
 
 
